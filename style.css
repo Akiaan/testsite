@@ -1,0 +1,97 @@
+html
+            
+.fig {
+    text-align: center;
+}
+
+.photo_inner{
+    display: inline-block;
+    position: relative;
+}
+
+.photo_inner:hover::after{
+    content: attr(data-title);
+    position: absolute;
+    left: 20%; top:30%;
+    z-index: 1;
+    background: rgba(255,255,230,0.9);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    border: 1px solid #333;
+}
+
+.phoneblock{
+    width: 90%; /* Ширина слоя */
+    height: 75px;
+    /*float: right; */
+}
+
+.spoofPhoneBlock{
+    width: 19%;
+    padding: 1px; /* Поля вокруг текста */
+    float: left; 
+}
+
+.heriticSection{
+    height: 340px;
+}
+
+.textBlockFirst{
+    width: 59%;
+    height: 300px;
+    padding: 5px;
+    float: left;
+    background: rgba(255,255,230,0.9);
+    border: 2px solid #E81E25;
+    overflow: auto;
+}
+
+.photoLineFirst{
+    width: 38%;
+    height: 300px;
+    overflow: auto;
+    border: 2px;
+    float: right;
+}
+
+.widgetsCallArea{
+    width: 1510px;
+    height: 25px;
+    padding: 15px;
+    background: linear-gradient(to top left, #00FFFF, #000080);
+    color: white;
+}
+
+.holeSections{
+    width: 80%;
+    padding: 12px;
+    /*border: 2px solid #E81E25;*/
+}
+
+.indentFirstLine{
+    text-indent: 15px;
+}
+
+.secondTextB{
+    color: black;
+    align: right;
+}
+
+.comagic_phone_txt_1{}
+.comagic_phone_txt_2{}
+.comagic_phone_txt_3{}
+.comagic_phone_txt_4{}
+.comagic_phone_txt_5{}
+
+#footer {
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 10px;
+    background: #39b54a;
+    color: #fff;
+    width: 100%;
+}
+
+#body {
+
+}
