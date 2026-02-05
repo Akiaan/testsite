@@ -1,97 +1,169 @@
-html
-            
-.fig {
-    text-align: center;
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.photo_inner{
-    display: inline-block;
-    position: relative;
-}
-
-.photo_inner:hover::after{
-    content: attr(data-title);
-    position: absolute;
-    left: 20%; top:30%;
-    z-index: 1;
-    background: rgba(255,255,230,0.9);
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    border: 1px solid #333;
-}
-
-.phoneblock{
-    width: 90%; /* Ширина слоя */
-    height: 75px;
-    /*float: right; */
-}
-
-.spoofPhoneBlock{
-    width: 19%;
-    padding: 1px; /* Поля вокруг текста */
-    float: left; 
-}
-
-.heriticSection{
-    height: 340px;
-}
-
-.textBlockFirst{
-    width: 59%;
-    height: 300px;
-    padding: 5px;
-    float: left;
-    background: rgba(255,255,230,0.9);
-    border: 2px solid #E81E25;
-    overflow: auto;
-}
-
-.photoLineFirst{
-    width: 38%;
-    height: 300px;
-    overflow: auto;
-    border: 2px;
-    float: right;
-}
-
-.widgetsCallArea{
-    width: 1510px;
-    height: 25px;
-    padding: 15px;
-    background: linear-gradient(to top left, #00FFFF, #000080);
-    color: white;
-}
-
-.holeSections{
+.container {
     width: 80%;
-    padding: 12px;
-    /*border: 2px solid #E81E25;*/
+    margin: auto;
+    overflow: hidden;
 }
 
-.indentFirstLine{
-    text-indent: 15px;
-}
-
-.secondTextB{
-    color: black;
-    align: right;
-}
-
-.comagic_phone_txt_1{}
-.comagic_phone_txt_2{}
-.comagic_phone_txt_3{}
-.comagic_phone_txt_4{}
-.comagic_phone_txt_5{}
-
-#footer {
-    position: fixed;
-    left: 0; bottom: 0;
-    padding: 10px;
-    background: #39b54a;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
-    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-#body {
+/* Шапка сайта */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero секция */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Секция Услуги */
+.services {
+    padding: 50px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.service-item img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Секция О нас */
+.about {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content img {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Медиа запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
 }
